@@ -2,8 +2,8 @@ class PostTestController < ApplicationController
   protect_from_forgery except: :profile
   
   def profile
-    pram01 = params[:uuid]
-    Fridge.create('title' => pram01)
+    image = params[:image]
+    Fridge.create('image' => image)
     render json: {result: 0}
   end
 end
