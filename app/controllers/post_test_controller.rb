@@ -3,7 +3,8 @@ class PostTestController < ApplicationController
   
   def profile
     image = params[:image]
-    Fridge.create(title: "test", image: image)
+    title = params[:title]
+    Fridge.create(title: title, image: image)
     render json: {result: 0}
   end
 end
